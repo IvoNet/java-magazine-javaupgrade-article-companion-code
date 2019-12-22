@@ -21,11 +21,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 /**
- * @author Ivo Woltring
+ * I had expected this one to also not work anymore after java 9+, but to my surprise it kept on working??
  */
-public class App {
+public class ComSunServer {
     public static void main(String[] args) throws IOException {
-        String payload = "duke";
+        String payload = "https://www.IvoNet.nl";
         HttpServer server = HttpServer.create(new InetSocketAddress(4250), 0);
         HttpContext context = server.createContext("/java");
         context.setHandler((he) -> {
